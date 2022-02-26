@@ -1,0 +1,21 @@
+.Screen {
+  display: flex;
+  flex-direction: column;
+  width: 1920px;
+  height: 1080px;
+  background-color: black;
+  color: white;
+}
+
+.MidBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.BanBar {
+  display: flex;
+  flex-direction: row;
+  height: 180px;
+  background-color: purple;
+}
