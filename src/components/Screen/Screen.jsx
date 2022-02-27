@@ -1,6 +1,7 @@
 import Topbar from '../Topbar'
 import RedTeam from '../RedTeam'
 import BlueTeam from '../BlueTeam'
+import Banbar from '../Banbar'
 
 const template = () => ( 
   <div className="Screen">
@@ -9,9 +10,7 @@ const template = () => (
       <BlueTeam />
       <RedTeam/>
     </div>
-    <div className="BanBar">
-      BanBar
-    </div>
+    <Banbar />
   </div>
 )
 

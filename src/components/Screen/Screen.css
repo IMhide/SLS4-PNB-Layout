@@ -12,10 +12,3 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
-.BanBar {
-  display: flex;
-  flex-direction: row;
-  height: 180px;
-  background-color: purple;
-}

@@ -1,0 +1,62 @@
+.Banbar {
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+}
+
+.BlueBanned{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.Ban
+{
+  width: 140px;
+  height: 120px;
+  text-align: center;
+}
+
+.BlueBanned .Ban img {
+  border: purple 2px solid;
+  width: 100px;
+  height: 100px;
+}
+
+.RedBanned{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.RedBanned .Ban img {
+  border: orange 2px solid;
+  width: 100px;
+  height: 100px;
+}
+
+.BannedHero{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.BanMessages{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white
+}
+
+.BanMessages div{
+  width: 37%;
+  text-align: center;
+  font-family: 'Organetto';
+}
+
+.State{
+  margin: auto;
+  text-align: center;
+  font-family: 'Organetto';
+  font-size: 1.1vw;
+}
