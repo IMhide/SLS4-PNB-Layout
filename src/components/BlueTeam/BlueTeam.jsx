@@ -1,6 +1,12 @@
+import BluePick from '../BluePick'
+
 const template = () => ( 
   <div className="BlueTeam">
-    BlueTeam Component
+    <BluePick active={true}/>
+    <BluePick />
+    <BluePick />
+    <BluePick />
+    <BluePick />
   </div>
 )
 

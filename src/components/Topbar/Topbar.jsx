@@ -1,13 +1,33 @@
-const template = () => ( 
-  <div className="Topbar">
-    <div className="BlueTeamName">
-      Team 1 
+const template = ({blueTeamName, redTeamName, blueLogo, redLogo}) => ( 
+  <div className="Topbar"> 
+    <div className="BlueTeamDisplay">
+      <div className="BlueTeamLogo">
+        {blueLogo &&
+        <img src={blueLogo} /> 
+        }
+      </div>
+      <div className="BlueTeamName">
+        {blueTeamName}
+      </div>
     </div>
     <div className="Score">
-      0 - 0
+      <div className="blueScore">
+        0
+      </div>
+      <img src='SLSLogo.png' />
+      <div className="redScore">
+        0
+      </div>
     </div>
-    <div className="RedTeamName">
-      Team 2
+    <div className="RedTeamDisplay">
+      <div className="RedTeamName">
+        {redTeamName}
+      </div>
+      <div className="RedTeamLogo">
+        {redLogo &&
+        <img src={redLogo} /> 
+        }
+      </div>
     </div>
   </div>
 )

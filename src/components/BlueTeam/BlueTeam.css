@@ -1,5 +1,6 @@
 .BlueTeam {
+  display: flex;
+  flex-direction: column;
   height: 720px;
   width: 400px;
-  background-color: blue;
 }
