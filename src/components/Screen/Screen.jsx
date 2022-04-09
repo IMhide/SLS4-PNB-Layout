@@ -8,6 +8,9 @@ const template = () => (
     <Topbar />
     <div className='MidBar'>
       <BlueTeam />
+      <div className='Timer'>
+        :30
+      </div>
       <RedTeam/>
     </div>
     <Banbar />

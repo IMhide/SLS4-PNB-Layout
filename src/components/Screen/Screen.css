@@ -12,3 +12,10 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+.Timer{
+  font-size: 2vw;
+  width: 160px;
+  height: 100px;
+  text-align: center;
+}
