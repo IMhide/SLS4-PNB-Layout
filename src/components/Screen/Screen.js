@@ -3,9 +3,9 @@ import './Screen.css';
 import template from "./Screen.jsx";
 
 
-const Screen = () => {
-  console.log('coucou')
- return(template())
+const Screen = ({config}) => {
+  console.log(config)
+ return(template(config))
 }
 
 export default Screen;

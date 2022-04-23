@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import './Topbar.css';
 import template from './Topbar.jsx'
 
-const Topbar = () => {
-  const blueTeamName = 'LLQVG';
-  const redTeamName = 'Jacky Tornade Gaming';
+const Topbar = ({infos}) => {
+  const blueTeamName = infos.blueTeam.name;
+  const redTeamName = infos.redTeam.name;
   const [blueLogo, setBlueLogo] = useState(null) 
   const [redLogo, setRedLogo] = useState(null) 
   useEffect( () => {
@@ -17,6 +17,8 @@ const Topbar = () => {
     redTeamName,
     blueLogo,
     redLogo,
+    blueScore: infos.blueTeam.score,
+    redScore: infos.redTeam.score
   }))
 };
 

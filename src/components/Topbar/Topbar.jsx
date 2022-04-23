@@ -1,4 +1,4 @@
-const template = ({blueTeamName, redTeamName, blueLogo, redLogo}) => ( 
+const template = ({blueTeamName, redTeamName, blueLogo, redLogo, blueScore, redScore}) => ( 
   <div className="Topbar"> 
     <div className="BlueTeamDisplay">
       <div className="BlueTeamLogo">
@@ -12,11 +12,11 @@ const template = ({blueTeamName, redTeamName, blueLogo, redLogo}) => (
     </div>
     <div className="Score">
       <div className="blueScore">
-        0
+        {blueScore}
       </div>
       <img src='SLSLogo.png' />
       <div className="redScore">
-        0
+        {redScore}
       </div>
     </div>
     <div className="RedTeamDisplay">

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './fonts/organetto.otf';
+import './ReactotronConfig'
 
 
 ReactDOM.render(

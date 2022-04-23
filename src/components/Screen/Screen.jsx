@@ -3,15 +3,15 @@ import RedTeam from '../RedTeam'
 import BlueTeam from '../BlueTeam'
 import Banbar from '../Banbar'
 
-const template = () => ( 
+const template = (config) => ( 
   <div className="Screen">
-    <Topbar />
+    <Topbar infos={config.frontend}/>
     <div className='MidBar'>
       <BlueTeam />
       <div className='Timer'>
         :30
       </div>
-      <RedTeam/>
+      <RedTeam />
     </div>
     <Banbar />
   </div>

@@ -24,7 +24,6 @@ function App() {
     });
 
     Window.PB.on('heartbeat', hb => {
-      console.info(`Got new config: ${JSON.stringify(hb.config)}`);
       setConfig(hb.config);
     });
 
@@ -36,8 +35,31 @@ function App() {
   }, []);
 
 
+  if (Window.PB.getQueryVariable('status') === '2') {
 
-  return (<Screen />);
+    const status = {
+      backend: Window.PB.getQueryVariable('backend'),
+      error: error,
+      config: config,
+      state: { ...globalState, config: undefined, blueTeam: JSON.stringify(globalState.blueTeam), redTeam: JSON.stringify(globalState.redTeam) }
+    }
+    return (
+      <>
+        <h1>Backend Error</h1> 
+        <p>{JSON.stringify(status, undefined, 4)}</p>
+      </>
+    )
+  }
+
+  if (error) {
+    return (
+      <>
+        <p>{error}</p>ggG
+      </>
+    )
+  }
+
+  return (<Screen config={config} />);
 }
 
 export default App;
