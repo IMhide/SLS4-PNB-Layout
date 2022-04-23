@@ -1,12 +1,10 @@
 import RedPick from '../RedPick'
 
-const template = () => ( 
+const template = ({team}) => ( 
   <div className="RedTeam">
-    <RedPick />
-    <RedPick active={true}/>
-    <RedPick />
-    <RedPick />
-    <RedPick />
+    {team.map((player, index) => (
+      <RedPick active={player.isActive} champion={player.champion} playerName={player.displayName}/>
+    ))}
   </div>
 )
 

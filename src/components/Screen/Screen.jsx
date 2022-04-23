@@ -8,11 +8,11 @@ const template = ({config, state, timer, blueTeam, redTeam}) => {
     <div className="Screen">
       <Topbar infos={config}/>
       <div className='MidBar'>
-        <BlueTeam />
+        <BlueTeam team={blueTeam.picks}/>
         <div className='Timer'>
           :{timer} 
         </div>
-        <RedTeam />
+        <RedTeam team={redTeam.picks}/>
       </div>
       <Banbar blueBan={blueTeam.bans} redBan={redTeam.bans} state={state} />
     </div>

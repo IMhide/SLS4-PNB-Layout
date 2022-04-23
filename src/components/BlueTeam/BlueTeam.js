@@ -2,8 +2,8 @@ import template from './BlueTeam.jsx'
 import './BlueTeam.css';
 
 
-const BlueTeam = () => { 
-  return (template())
+const BlueTeam = ({team}) => { 
+  return (template({team}))
   };
 
 export default BlueTeam;
