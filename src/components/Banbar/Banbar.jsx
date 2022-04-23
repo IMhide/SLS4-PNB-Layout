@@ -1,42 +1,22 @@
-const template = () => ( 
+const template = ({blueBan, redBan, state}) => ( 
   <div className="Banbar"> 
     <div className='BannedHero'>
       <div className='BlueBanned'>
+        {blueBan.map((champ) => (
         <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
+          <img src={`http://localhost:8999/${champ.champion.squareImg}`}/>
         </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
+        ))}
       </div>
       <div className='State'>
-        PICK PHASE
+        {state}
       </div>
       <div className='RedBanned'>
+        {redBan.map((champ) => (
         <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
+          <img src={`http://localhost:8999/${champ.champion.squareImg}`}/>
         </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
-        <div className="Ban">
-          <img src='http://localhost:8999/cache/12.4.1/champion/Neeko_square.png'/>
-        </div>
+        ))}
       </div>
     </div>
     <div className="BanMessages">

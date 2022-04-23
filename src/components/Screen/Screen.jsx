@@ -3,18 +3,19 @@ import RedTeam from '../RedTeam'
 import BlueTeam from '../BlueTeam'
 import Banbar from '../Banbar'
 
-const template = (config) => ( 
-  <div className="Screen">
-    <Topbar infos={config.frontend}/>
-    <div className='MidBar'>
-      <BlueTeam />
-      <div className='Timer'>
-        :30
+const template = ({config, state, timer, blueTeam, redTeam}) => {
+  return( 
+    <div className="Screen">
+      <Topbar infos={config}/>
+      <div className='MidBar'>
+        <BlueTeam />
+        <div className='Timer'>
+          :{timer} 
+        </div>
+        <RedTeam />
       </div>
-      <RedTeam />
+      <Banbar blueBan={blueTeam.bans} redBan={redTeam.bans} state={state} />
     </div>
-    <Banbar />
-  </div>
-)
-
+  )
+}
 export default template;

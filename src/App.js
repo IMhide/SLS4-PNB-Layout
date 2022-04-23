@@ -2,8 +2,19 @@ import Screen from './components/Screen'
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [globalState, setGlobalState] = useState({});
   const [error, setError] = useState('');
+  const [globalState, setGlobalState] = useState({
+    state : 'NOSTATE',
+    timer: 0,
+    blueTeam: {
+      picks: [],
+      bans:[]
+    },
+    redTeam: {
+      picks: [],
+      bans:[]
+    }
+  });
   const [config, setConfig] = useState({
     frontend: {
       blueTeam: {
@@ -19,6 +30,7 @@ function App() {
 
   useEffect(() => {
     Window.PB.on('newState', state => {
+      console.log(state.state)
       setGlobalState(state.state);
       setConfig(state.state.config);
     });
@@ -54,12 +66,12 @@ function App() {
   if (error) {
     return (
       <>
-        <p>{error}</p>ggG
+        <p>{error}</p>
       </>
     )
   }
 
-  return (<Screen config={config} />);
+  return (<Screen config={config.frontend} state={globalState.state} timer={globalState.timer} blueTeam={globalState.blueTeam} redTeam={globalState.redTeam}/>);
 }
 
 export default App;

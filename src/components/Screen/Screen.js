@@ -3,9 +3,8 @@ import './Screen.css';
 import template from "./Screen.jsx";
 
 
-const Screen = ({config}) => {
-  console.log(config)
- return(template(config))
+const Screen = ({config, state, timer, blueTeam, redTeam}) => {
+ return(template({config, state, timer, blueTeam, redTeam}))
 }
 
 export default Screen;
