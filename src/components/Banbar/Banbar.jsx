@@ -3,9 +3,10 @@ const template = ({blueBan, redBan, state}) => (
     <div className='BannedHero'>
       <div className='BlueBanned'>
         {blueBan.map((champ) => (
-        <div className="Ban">
-          <img src={`http://localhost:8999${champ.champion.squareImg}`}/>
-        </div>
+          champ.champion.squareImg &&
+            <div className="Ban">
+              <img src={`http://localhost:8999${champ.champion.squareImg}`}/>
+            </div>
         ))}
       </div>
       <div className='State'>
@@ -13,9 +14,10 @@ const template = ({blueBan, redBan, state}) => (
       </div>
       <div className='RedBanned'>
         {redBan.map((champ) => (
-        <div className="Ban">
-          <img src={`http://localhost:8999${champ.champion.squareImg}`}/>
-        </div>
+          champ.champion.squareImg &&
+            <div className="Ban">
+              <img src={`http://localhost:8999${champ.champion.squareImg}`}/>
+            </div>
         ))}
       </div>
     </div>
