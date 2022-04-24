@@ -8,6 +8,8 @@
   margin-top: 25px;
   display: flex;
   flex-direction: row;
+  width: 34%;
+  height: 120px;
 }
 
 .Ban
@@ -26,7 +28,9 @@
 .RedBanned{
   margin-top: 25px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
+  width: 34%;
+  height: 120px;
 }
 
 .RedBanned .Ban img {
