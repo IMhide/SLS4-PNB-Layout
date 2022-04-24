@@ -1,13 +1,13 @@
 @keyframes blink_red {
-  0% { box-shadow: inset 0px 0px 20px 20px rgba(255,0,0,0.0); }
-  50% { box-shadow: inset 0px 0px 20px 20px rgba(255,0, 0,0.8); }
-  100% { box-shadow: inset 0px 0px 20px 20px rgba(255,0,0,0.0); }
+  0% { box-shadow: inset 0px 0px 20px 20px rgba(245, 122, 44,0.0); }
+  50% { box-shadow: inset 0px 0px 20px 20px rgba(245, 122, 44,0.8); }
+  100% { box-shadow: inset 0px 0px 20px 20px rgba(245, 122, 44,0.0); }
 }
 
 @-webkit-keyframes blink_red {
-  0% { box-shadow: inset 0px 0px 20px 20px rgba(255,0,0,0.0); }
-  50% { box-shadow: inset 0px 0px 20px 20px rgba(255,0, 0,0.8); }
-  100% { box-shadow: inset 0px 0px 20px 20px rgba(255,0,0,0.0); }
+  0% { box-shadow: inset 0px 0px 20px 20px rgba(245,122,44,0.0); }
+  50% { box-shadow: inset 0px 0px 20px 20px rgba(245,122, 44,0.8); }
+  100% { box-shadow: inset 0px 0px 20px 20px rgba(245, 122, 44,0.0); }
 }
 
 .RedPick{ 
